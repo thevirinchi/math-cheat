@@ -22,18 +22,19 @@ int fact(int n)
 int main() 
 { 
 	// number of values given 
-	int n = 5; 
-	float x[] = { 1891, 1901, 1911, 
-				1921, 1931 }; 
+	int n = 6; 
+	float x[] = { 45, 46, 47, 
+				48, 49, 50 }; 
 					
 	// y[][] is used for difference 
 	// table and y[][0] used for input 
 	float y[n][n]; 
-	y[0][0] = 46; 
-	y[1][0] = 66; 
-	y[2][0] = 81; 
-	y[3][0] = 93; 
-	y[4][0] = 101; 
+	y[0][0] = 1.00000; 
+	y[1][0] = 1.03553; 
+	y[2][0] = 1.07237; 
+	y[3][0] = 1.11061; 
+	y[4][0] = 1.15037;
+    y[5][0] = 1.19175;
 
 	// Calculating the backward difference table 
 	for (int i = 1; i < n; i++) { 
@@ -50,7 +51,7 @@ int main()
 	} 
 
 	// Value to interpolate at 
-	float value = 1925; 
+	float value = 48.25; 
 
 	// Initializing u and sum 
 	float sum = y[n - 1][0]; 
